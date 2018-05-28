@@ -4,10 +4,10 @@ body, html {
   margin: 0;
   padding: 0;
   font-family: 'Nunito', sans-serif;
-
 }
 
 /* Global nav - inspired from previous exercise */
+
 .globalnav {
   width: auto;
   height: auto;
@@ -66,13 +66,7 @@ body, html {
   border-radius: 20px;
 }
 
-.header-right a.logo:hover {
-  /* Keep background for logo same as header with hover */
-  color: rgba(147, 112, 219, 0.8);
-  background-color: rgba(0, 0, 0, 0.0);
-}
-
-/* End Global nav - might need to change */
+/* End Global nav */
 
 .main-content {
   height: auto;
@@ -105,7 +99,7 @@ img {
   max-width: 500px;
 }
 
-/* Form taken from other exercise - still works! */
+/* Start Form */
 
 .form {
   display: block;
@@ -137,6 +131,7 @@ select {
 }
 
 .how-many-scratches, .how-many-treats {
+  /* Helps keep the question and selector on same line */
   display: flex;
   justify-content: space-between;
 }
@@ -184,7 +179,7 @@ button:hover {
   margin-bottom: 25px;
 }
 
-/* Footer stolen from other exercise - still works! */
+/* Start footer */
 
 .footer-section {
   display: flex;
@@ -237,6 +232,7 @@ button:hover {
   color: rgba(147, 112, 219, 0.8);
   cursor: pointer;
 }
+
 #social-media p:hover {
   color: rgba(147, 112, 219, 0.8);
   cursor: pointer;
@@ -244,7 +240,7 @@ button:hover {
 
 /* End footer */
 
-/* Mobile - everything set to be a column (other custom changes) */
+/* Mobile - everything set to be in a column */
 
 @media (max-width: 768px) {
   body, html {
@@ -254,6 +250,7 @@ button:hover {
     padding: 0;
   }
   .awards, .main-content, .footer-section, .globalnav, h1 {
+    /* Sets content to align in a column */
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -277,7 +274,7 @@ button:hover {
   .logo {
     padding: 5%;
   }
-
+  /* Modifying form to look better on Mobile */
   .form {
     display: block;
   }
