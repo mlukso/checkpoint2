@@ -1,0 +1,330 @@
+body, html {
+  height: 100%;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  font-family: 'Nunito', sans-serif;
+
+}
+
+/* Global nav - inspired from previous exercise */
+.globalnav {
+  width: 100%;
+  height: auto;
+  display: flex;
+  border-bottom: 3px solid black;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  padding: 25px 80px 20px 25px;
+  font-size: 50px;
+}
+
+.header-right {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  padding: 0 10% 10px 20%;
+}
+
+.header-right a {
+  /* Text styles for nav */
+  color: black;
+  text-align: center;
+  text-decoration: none;
+  font-size: 18px;
+  line-height: 25px;
+  /* Positioning and border*/
+  padding: 12px;
+  border-radius: 20px;
+}
+
+.header-right a.logo {
+  font-size: 60px;
+  font-weight: bold;
+  text-align: center;
+  padding: 0px 0px 10px 0px;
+}
+
+.header-right a:hover {
+  /* Styles for hover on nav */
+  color: black;
+  background-color: rgba(147, 112, 219, 0.2);
+  cursor: pointer;
+  border-radius: 20px;
+}
+
+.header-right a.active {
+  /* Active styles on nav */
+  background-color: rgba(147, 112, 219, 0.8);
+  color: #f2f2f2;
+  border: 1.5px solid #f2f2f2;
+  border-radius: 20px;
+}
+
+.header-right a.logo:hover {
+  /* Keep background for logo same as header with hover */
+  color: rgba(147, 112, 219, 0.8);
+  background-color: rgba(0, 0, 0, 0.0);
+}
+
+/* End Global nav - might need to change */
+
+.main-content {
+  height: auto;
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-gap: 2%;
+}
+
+.box {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-width: 300px;
+  margin: 50px;
+}
+
+.a {
+  grid-column: 1 / 3;
+  max-width: 750px;
+}
+
+img {
+  /* All images affected but doesn't matter for now */
+  border-radius: 100px;
+}
+
+.b {
+  grid-column: 3 / 5;
+  max-width: 500px;
+}
+
+/* Form taken from other exercise - still works! */
+
+.form {
+  display: block;
+}
+
+.form h1 {
+  text-align: center;
+  padding: 15px;
+}
+
+input[type=text] {
+  /* Text in boxes don't reset */
+  width: 45%;
+  padding: 15px;
+  margin: 10px 0px 10px 15px;
+  box-sizing: border-box;
+  background-color: rgba(0, 0, 0, 0.1);
+  font-size: 13px;
+  border-radius: 5px;
+}
+
+select {
+  width: 100px;
+  height: 40px;
+  margin: 20px 10px 0px 0px;
+  background-color: rgba(0, 0, 0, 0.1);
+  font-size: 13px;
+  float: right;
+}
+
+.how-many-scratches, .how-many-treats {
+  display: flex;
+  justify-content: space-between;
+}
+
+.form p {
+  float: left;
+  padding: 0px 0px 0px 15px;
+  margin: 20px 0px 20px 0px;
+  font-size: 20px;
+}
+
+.radio {
+  display: block;
+  font-size: 20px;
+  padding: 33px 0px 30px 10px;
+}
+
+button {
+  border: 3px solid #f2f2f2;
+  border-radius: 20px;
+  padding: 20px;
+  text-align: center;
+  cursor: pointer;
+  font-size: 15px;
+  display: block;
+  color: #f2f2f2;
+  background-color: rgba(147, 112, 219, 0.8);
+  margin: 0px 0px 30px 140px;
+}
+
+button:hover {
+  background-color: rgba(147, 112, 219, 0.2);
+  color: white;
+}
+
+/* End Form */
+
+.awards {
+  width: 100%;
+  height: auto;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  padding: 25px;
+  margin-bottom: 25px;
+}
+
+/* Footer stolen from other exercise - still works! */
+
+.footer-section {
+  display: flex;
+  justify-content: space-around;
+  width: 100%;
+  border-top: 3px solid black;
+  padding-top: 25px;
+}
+
+.footer-item {
+  width: 25%;
+  height: 100%;
+}
+
+.footer-item h3 {
+  font-size: 18px;
+}
+
+.footer-item p {
+  opacity: .5;
+}
+
+#useful-links {
+  padding-left: 60px;
+}
+
+#social-media {
+  padding-right: 60px;
+  text-align: left;
+}
+
+#social-media p {
+  width: 100px;
+  padding-bottom: 3px;
+}
+
+#icon {
+  float: right;
+  background-color: rgba(147, 112, 219, 0.8);
+}
+
+#useful-links p {
+  line-height: 10px;
+  padding-bottom: 5px;
+  font-size: 18px;
+  width: 80%;
+}
+
+#useful-links p:hover {
+  color: rgba(147, 112, 219, 0.8);
+  cursor: pointer;
+}
+#social-media p:hover {
+  color: rgba(147, 112, 219, 0.8);
+  cursor: pointer;
+}
+
+/* End footer */
+
+/* Mobile - everything set to be a column (other custom changes) */
+
+@media (max-width: 768px) {
+  body, html {
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+  }
+  .awards, .main-content, .footer-section, .globalnav, h1 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    margin: 0;
+    padding: 0;
+  }
+  .aa, .bb, .cc, .dd {
+    padding: 5%;
+  }
+  #useful-links {
+    padding: 0;
+  }
+  #social-media {
+    text-align: left;
+    padding: 0;
+  }
+  .globalnav {
+    width: 100%;
+    height: auto;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    border-bottom: 3px solid black;
+  }
+  .form {
+    display: block;
+  }
+  .form h1 {
+    text-align: center;
+    padding: 15px;
+  }
+  input[type=text] {
+    /* Text in boxes don't reset */
+    width: 95%;
+    padding: 15px;
+    margin: 10px 0px 10px 15px;
+    box-sizing: border-box;
+    background-color: rgba(0, 0, 0, 0.1);
+    font-size: 13px;
+    border-radius: 5px;
+  }
+  select {
+    width: 50px;
+    height: 40px;
+    background-color: rgba(0, 0, 0, 0.1);
+    font-size: 13px;
+  }
+  .how-many-scratches, .how-many-treats {
+    display: flex;
+    justify-content: space-between;
+  }
+  .radio {
+    font-size: 20px;
+  }
+  button {
+    border: 3px solid #f2f2f2;
+    border-radius: 20px;
+    padding: 20px;
+    text-align: center;
+    cursor: pointer;
+    font-size: 15px;
+    display: block;
+    color: #f2f2f2;
+    background-color: rgba(147, 112, 219, 0.8);
+    margin: 0px 0px 0px 0px;
+    width: 100%;
+  }
+  button:hover {
+    background-color: rgba(147, 112, 219, 0.2);
+  }
+}
+
+/* End Mobile */
